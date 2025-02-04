@@ -1,0 +1,78 @@
+{% extends 'base/base.html' %}
+<!-- 
+{% load static %} -->
+
+{% block container %}
+
+<section class="h-[100vh]" style="background-image: url(/static/media/images/by\ ksonshoots.jpg); background-size: contain; background-position: center;">
+    <header class="flex justify-between h-[60px] px-20 items-center bg-black bg-opacity-50 animated-header fixed w-full pt-0">
+        <div>
+            <h1 class="text-[20px] font-bold text-white">TRIFT STORE<i class='bx bxs-shopping-bag text-green-500 ml-2'></i></h1>
+        </div>
+        <div class="w-[30%] ml-[100px] flex justify-between">
+            <a href="" class="text-white m-auto animated-link">Home</a>
+            <a href="" class="text-white m-auto animated-link">About</a>
+            <a href="" class="text-white m-auto animated-link">Contact</a>
+            <a href="" class="text-white m-auto animated-link">Cart</a>
+        </div>
+        <div>
+            <form action="" method="get">
+                <input type="text" name="q" placeholder="Search..." class="rounded-3xl px-4 w-[200px] search-input"> 
+                <button type="submit" class="search-button"><i class='bx bx-search-alt-2 text-green-600 relative right-[25px] top-[1px] font-bold'></i></button>
+            </form>
+        </div>
+    </header>
+    <div class="text-center py-[230px] bg-black px-[200px] bg-opacity-35 animated-content">
+        <div>
+            <h1 class="text-[100px] font-bold text-white opacity-55 main-heading">URBAN EDGE</h1>
+            <h2 class="text-green-400 f text-[30px] sub-heading">Everithing you are  looking  <br> for id here</h2>
+            <button class="mt-7 animated-button"><a href="" class="bg-white font-bold px-6 py-2 rounded-sm text-green-400 bg-opacity-30">check it</a></button>
+        </div>
+    </div>
+</section>   
+<section>
+    <div class="flex justify-between px-[100px] py-[50px] bg-green-50">
+        <div class="">
+            <h1 class="text-[15px] text-center font-bold text-green-900 relative">T-SHIRTS
+            <img src="/static/media/images/t-shirts.jpg" class="w-[150px] h-[150px] rounded-[50%] mt-5" alt="">
+        </div>
+        <div class="">
+            <h1 class="text-[15px] text-center font-bold text-green-900 relative">COMBO&OFFERS
+            <img src="/static/media/images/Carly (smithkcarly) - Profile _ Pinterest.jpg" class="w-[150px] h-[150px] rounded-[50%] mt-5" alt="">
+        </div>
+        <div class="">
+            <h1 class="text-[15px] text-center font-bold text-green-900 relative">SHORTS
+            <img src="/static/media/images/shorts.webp" class="w-[150px] h-[150px] rounded-[50%] mt-5" alt="">
+        </div>
+        <div class="">
+            <h1 class="text-[15px] text-center font-bold text-green-900 relative">ACCESRIES
+            <img src="/static/media/images/acceseries.jpg" class="w-[150px] h-[150px] rounded-[50%] mt-5" alt="">
+        </div>
+        <div class="">
+            <h1 class="text-[15px] text-center font-bold text-green-900 relative">SUNGLASSES
+            <img src="/static/media/images/glasses2.jpg" class="w-[150px] h-[150px] rounded-[50%] mt-5" alt="">
+        </div>
+        <div class="">
+            <h1 class="text-[15px] text-center font-bold text-green-900 relative">JACKETS
+            <img src="/static/media/images/jacket-2.jpg" class="w-[150px] h-[150px] rounded-[50%] mt-5" alt="">
+        </div>      
+    </div>
+</section>
+<section class="bg-green-50">
+    <div class="flex px-[200px] h-[400px] py-10">
+        <div style="background-image: url(/static/media/images/offerzone.jpg); background-size: cover; background-position: center;" class="h-full w-[40%] mr-[10px]">
+            <h1 class="text-center font-bold  text-white text-[30px] font-mono mt-[100px]">WELL DEMANDED& <br>LIMITTED STOCKS</h1>
+        </div>
+        <div class="h-[400px]">
+           <div style="background-image: url(/static/media/images/bg-3.jpg); background-size: cover; background-position: center;" class="h-[155px] w-[700px]">
+                <h1 class="text-white text-center items-center text-[30px] pt-10 font-mono font-extrabold">OFFERZONE'50% </h1>
+           </div>
+           <div style="background-image: url(/static/media/images/bg-4.jpg); background-size: cover; background-position: top;" class="h-[155px] mt-[10px] w-[700px]">
+            <h1 class="text-white text-center items-center text-[30px] pt-10 font-extrabold font-mono">NEW STOCKS$</h1>
+       </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
