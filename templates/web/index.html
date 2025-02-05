@@ -5,7 +5,7 @@
 {% block container %}
 
 <section class="h-[100vh]" style="background-image: url(/static/media/images/by\ ksonshoots.jpg); background-size: contain; background-position: center;">
-    <header class="flex justify-between h-[60px] px-20 items-center bg-black bg-opacity-50 animated-header fixed w-full pt-0">
+    <header class="flex justify-between h-[60px] px-20 items-center bg-black bg-opacity-50 animated-header fixed w-full pt-0 z-100">
         <div>
             <h1 class="text-[20px] font-bold text-white">TRIFT STORE<i class='bx bxs-shopping-bag text-green-500 ml-2'></i></h1>
         </div>
@@ -22,18 +22,18 @@
             </form>
         </div>
     </header>
-    <div class="text-center py-[230px] bg-black px-[200px] bg-opacity-35 animated-content">
+    <div class="text-center py-[220px] bg-black px-[200px] bg-opacity-35 animated-content">
         <div>
-            <h1 class="text-[100px] font-bold text-white opacity-55 main-heading">URBAN EDGE</h1>
+            <h1 class="text-[100px] font-bold text-white  main-heading">URBAN EDGE</h1>
             <h2 class="text-green-400 f text-[30px] sub-heading">Everithing you are  looking  <br> for id here</h2>
             <button class="mt-7 animated-button"><a href="" class="bg-white font-bold px-6 py-2 rounded-sm text-green-400 bg-opacity-30">check it</a></button>
         </div>
     </div>
 </section>   
 <section>
-    <div class="flex justify-between px-[100px] py-[50px] bg-green-50">
+    <div class="flex justify-between px-[100px] py-[50px] ">
         <div class="">
-            <h1 class="text-[15px] text-center font-bold text-green-900 relative">T-SHIRTS
+            <h1 class="text-[15px] text-center font-bold text-green-900 relative z-0">T-SHIRTS
             <a href=""><img src="/static/media/images/t-shirts.jpg" class="w-[150px] h-[150px] rounded-[50%] mt-5" alt=""></a>
         </div>
         <div class="">
@@ -58,7 +58,7 @@
         </div>      
     </div>
 </section>
-<section class="bg-green-50">
+<section class="">
     <div class="flex px-[200px] h-[400px] py-10">
         <a href="" style="background-image: url(/static/media/images/offerzone.jpg); background-size: cover; background-position: center;" class="h-full w-[40%] mr-[10px] rounded-xl">
             <h1 class="text-center font-bold  text-white text-[30px] font-mono mt-[100px]">WELL DEMANDED& <br>LIMITTED STOCKS</h1>
@@ -66,16 +66,167 @@
         <div class="h-[400px]">
            <a href="" style="background-image: url(/static/media/images/bg-3.jpg); background-size: cover; background-position: center;" class="h-[155px] w-[700px] rounded-xl block">
                 <h1 class="text-white text-center items-center text-[30px] pt-10 font-mono font-extrabold">OFFERZONE'50% </h1>
+                <img src="/static/media/images/new-offer.png" class="w-[50px] items-start relative bottom-[70px] left-[10px]" alt="">
            </a>
            <a href="" style="background-image: url(/static/media/images/bg-4.jpg); background-size: cover; background-position: top;" class="h-[155px] mt-[10px] w-[700px] rounded-xl block">
             <h1 class="text-white text-center items-center text-[30px] pt-10 font-extrabold font-mono">NEW STOCKS$</h1>
+            <img src="/static/media/images/new (1).png" class="w-[50px] items-start relative bottom-[70px] left-[10px]" alt="">
        </a>
         </div>
     </div>
 </section>
-<section>
+<section class="py-5">
+    <div class="py-10">
+        <h1 class="text-center text-4xl font-mono font-bold text-green-900 mb-3">OUR COLLECTIONS</h1>
+        <p class="text-center font-extralight">Lorem ipsum dolor, sit amet consectetur adipisicing elit.  Officia accusamus veniam, at sit fugit commodi <br> molestiae veritatis magnam  quam minus, eos, nobis asperiores dolores.</p>
+    </div>
+    <div class="flex justify-between px-[200px] ">
+        <div class="m-auto">
+            <i class='bx bxs-truck mb-5 text-[40px] opacity-40 border-[2px] ml-2 rounded-full p-5' ></i>
+            <h1 class=" font-mono ">quick delivery</h1>
+        </div>
+        <div class="m-auto">
+            <img src="/static/media/images/discount.png" class="mb-5 ml-2 opacity-40 border-[2px] rounded-full p-5 w-[80px]" alt="">
+            <h1 class=" font-mono ">best offers</h1>
+        </div>
+        <div class="m-auto">
+            <img src="/static/media/images/returns.png" class="mb-5 ml-2 opacity-40 border-[2px] rounded-full p-5 w-[80px]" alt="">
+            <h1 class=" font-mono  text-center">returns</h1>
+        </div>
+        <div class="m-auto">
+            <img src="/static/media/images/payment-method.png" class="mb-5 ml-2 opacity-40 border-[2px] rounded-full p-5 w-[80px]" alt="">
+            <h1 class=" font-mono  text-center">Cashon delivery </h1>
+        </div>
+
     
+    </div>
+
 </section>
+<header class="p-6 bg-black shadow-md text-center text-2xl mt-10 font-bold font-mono text-white">Order Now </header>
+  <main class=" mx-auto p-8 px-[150px] bg-zinc-800 w-full">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Product Card -->
+      <a href="" class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition">
+        <img src="/static/media/images/prdct1.jpg" alt="Product Image" class="rounded-lg w-full h-[450px] object-cover mb-4">
+        <h2 class="text-lg font-semibold mb-2">Printed T-shirt</h2>
+        <p class="text-gray-500">Fashion</p>
+        <p class="text-xl font-bold mt-2">95 &euro;</p>
+      </a>
+
+      <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition">
+        <img src="/static/media/images/prdct2.jpg" alt="Product Image" class="rounded-lg w-full h-[450px] object-cover mb-4">
+        <h2 class="text-lg font-semibold mb-2">t-shirt</h2>
+        <p class="text-gray-500">Everyday</p>
+        <p class="text-xl font-bold mt-2">55 &euro;</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition">
+        <img src="/static/media/images/prdct3.jpg" alt="Product Image" class="rounded-lg w-full h-[450px] object-cover mb-4">
+        <h2 class="text-lg font-semibold mb-2">Leather Gloves</h2>
+        <p class="text-gray-500">Fashion</p>
+        <p class="text-xl font-bold mt-2">120 &euro;</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition">
+        <img src="/static/media/images/prdct4.jpg" alt="Product Image" class="rounded-lg w-full h-[450px] object-cover mb-4">
+        <h2 class="text-lg font-semibold mb-2">Flash Drive</h2>
+        <p class="text-gray-500">Everyday</p>
+        <p class="text-xl font-bold mt-2">15 &euro;</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition">
+        <img src="/static/media/images/prdct5.jpg" alt="Product Image" class="rounded-lg w-full h-[450px] object-cover mb-4">
+        <h2 class="text-lg font-semibold mb-2">Black Courier</h2>
+        <p class="text-gray-500">Travel</p>
+        <p class="text-xl font-bold mt-2">395 &euro;</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition">
+        <img src="/static/media/images/prdct6.jpg" alt="Product Image" class="rounded-lg w-full h-[450px] object-cover mb-4">
+        <h2 class="text-lg font-semibold mb-2">Black Duffle</h2>
+        <p class="text-gray-500">Fashion</p>
+        <p class="text-xl font-bold mt-2">420 &euro;</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition">
+        <img src="/static/media/images/prdct8.jpg" alt="Product Image" class="rounded-lg w-full h-[450px] object-cover mb-4">
+        <h2 class="text-lg font-semibold mb-2">Laptop Holster</h2>
+        <p class="text-gray-500">Travel</p>
+        <p class="text-xl font-bold mt-2">195 &euro;</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition">
+        <img src="/static/media/images/prdct9.jpg" alt="Product Image" class="rounded-lg w-full h-[450px] object-cover mb-4">
+        <h2 class="text-lg font-semibold mb-2">Black Workbag</h2>
+        <p class="text-gray-500">Travel</p>
+        <p class="text-xl font-bold mt-2">395 &euro;</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition">
+        <img src="/static/media/images/prdct10.jpg" alt="Product Image" class="rounded-lg w-full h-[450px] object-cover mb-4">
+        <h2 class="text-lg font-semibold mb-2">Wallet</h2>
+        <p class="text-gray-500">Fashion</p>
+        <p class="text-xl font-bold mt-2">95 &euro;</p>
+      </div>
+    </div>
+    <div class="bg-zinc-800 w-full text-center mt-10">
+        <a href="" class="text-center bg-white px-6 py-2 rounded-xl">View All Products</a>
+    </div>
+
+  </main>
+  <section class="mt-12 bg-gray-50 p-8 rounded-xl shadow-md">
+    <h2 class="text-2xl font-bold mb-4 text-center font-mono">Reviews History</h2>
+    <p class="text-gray-700 text-center mb-6">Explore feedback and experiences from our valued customers.</p>
+    <div class="flex justify-center">
+      <button id="reviewBtn" class="bg-green-900 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition font-semibold font-mono">Submit Review</button>
+    </div>
+    <div id="reviewForm" class="hidden mt-6">
+      <form class="max-w-2xl mx-auto">
+        <div class="mb-4"> 
+          <label for="review" class="block text-gray-700 mb-2 font-mono">Your Review</label>
+          <textarea id="review" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring focus:ring-blue-200 outline-none" placeholder="Share your thoughts on our products..."></textarea>
+        </div>
+        <button type="submit" class="bg-green-900 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition w-full font-semibold">Submit Feedback</button>
+      </form>
+    </div>
+  </section>
+  <footer class="bg-zinc-800 text-white py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Company Info -->
+      <div>
+        <h2 class="text-xl font-bold mb-4">About Us</h2>
+        <p class="text-gray-400">We offer the finest collection of fashion, travel, and everyday accessories. Discover your style with us!</p>
+      </div>
+
+      <!-- Navigation Links -->
+      <div>
+        <h2 class="text-xl font-bold mb-4">Quick Links</h2>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition">Shop</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h2 class="text-xl font-bold mb-4">Contact Us</h2>
+        <p class="text-gray-400">Email: support@example.com</p>
+        <p class="text-gray-400">Phone: +123 456 7890</p>
+        <p class="text-gray-400">Address: 123 Main Street, Anytown, USA</p>
+      </div>
+    </div>
+    <div class="text-center text-gray-500 mt-8">
+      &copy; 2025 Your Company Name. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('reviewBtn').addEventListener('click', function() {
+      document.getElementById('reviewForm').classList.toggle('hidden');
+    });
+  </script>
 
 
 {% endblock %}
