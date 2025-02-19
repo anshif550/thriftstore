@@ -1,0 +1,142 @@
+{% extends 'base/base.html' %}
+<!-- 
+{% load static %} -->
+
+{% block container %}
+
+<div class=" p-6 bg-zinc-900 w-full">
+    
+    <header class="flex justify-between items-center  rounded-xl overflow-hidden   h-[70px]" style="background-image: url(/static/media/images/singleheader.jpg); background-size: contain; background-size: calc(320px); background-position: var(450px); background-position-y: -40px; box-shadow: inset;">
+      <h1 class="text-2xl font-semibold  items-center flex text-white bg-black pl-[50px] pr-[50px] h-full font-mono  bg-opacity-75 shadow-black rounded-r-2xl">Thrift Store</h1>
+      <nav class="bg-black bg-opacity-75 rounded-l-2xl py-4 px-[50px]">
+        <ul class="flex space-x-8 items-center">
+          <li><a href="#" class="text-white font-mono hover:underline">Home</a></li>
+          <li><a href="#" class="text-white font-mono hover:underline">Shop</a></li>
+          <li><a href="#" class="text-white font-mono hover:underline">Contact</a></li>
+          <i class='bx bx-menu text-white text-[30px]'></i>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Product Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 px-[200px] py-[20px]">
+      <!-- Product Images -->
+      <div class="space-y-4">
+        <img src="{{product.image.url}}" alt="Main product image" class="w-[400px] m-auto h-[65vh] rounded-lg shadow main-image">
+        <div class="grid grid-cols-3 gap-x-1">
+          <img src="{{product.image_1.url}}" class="w-[110px] m-auto h-[150px] rounded-lg cursor-pointer" alt="Thumbnail 1">
+          <img src="{{product.image_2.url}}" class="w-[110px] m-auto h-[150px] rounded-lg cursor-pointer" alt="Thumbnail 2">
+          <img src="{{product.image_3.url}}" class="w-[110px] m-auto h-[150px] rounded-lg cursor-pointer" alt="Thumbnail 3">
+        </div>
+      </div>
+
+      <!-- Product Details -->
+      <div>
+        <h2 class="text-3xl font-semibold mb-2 text-white font-mono" >{{product.name}}</h2>
+        <p class="text-green-500 text-lg mb-4"> ₹ {{product.price}}</p>
+
+        <div class="mb-4">
+          <label for="color" class="block text-sm font-medium text-gray-500 ">Color</label>
+          <select id="color" name="color" class="mt-1 block w-full p-2 border rounded-md">
+            <option>Black</option>
+            <option>Brown</option>
+          </select>
+        </div>
+
+        <div class="mb-6">
+          <label for="size" class="block text-sm font-medium text-gray-500 ">Size (US)</label>
+          <div class="flex space-x-2 mt-2">
+            <button class="px-3 py-1 border text-gray-500 rounded hover:bg-gray-200">6</button>
+            <button class="px-3 py-1 border text-gray-500 rounded hover:bg-gray-200">7</button>
+            <button class="px-3 py-1 border text-gray-500 rounded hover:bg-gray-200">8</button>
+            <button class="px-3 py-1 border text-gray-500 rounded hover:bg-gray-200">9</button>
+          </div>
+        </div>
+
+        <button class="w-full bg-black text-white py-3 rounded-lg shadow-md hover:bg-gray-500 mb-4">Add to Shopping Bag</button>
+
+        <div class="mt-8">
+          <h3 class="text-lg font-semibold mb-2 text-white">Details</h3>
+          <ul class="list-disc pl-5 space-y-1 text-gray-700">
+            <li class="text-gray-500">100% Bovine leather</li>
+            <li class="text-gray-500">Heel height 3.3 inches</li>
+            <li class="text-gray-500">Boot width 10.1 inches</li>
+            <li class="text-gray-500">Zipper closure</li>
+            <li class="text-gray-500">Round toe line</li>
+            <li class="text-gray-500">Leather sole</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Related Products Section -->
+<section class="bg-zinc-800 py-10">
+  <h2 class="text-2xl font-bold text-center text-white mb-6">Related Products</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-[200px]">
+      {% for related_product in related_products %}
+          <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition">
+              <a href="{% url 'web:single_product' id=related_product.id %}">
+                  <img src="{{ related_product.image.url }}" class="w-full h-[250px] rounded-lg object-cover mb-4" alt="{{ related_product.name }}">
+                  <h3 class="text-lg font-semibold text-gray-900">{{ related_product.name }}</h3>
+                  <p class="text-green-500 text-lg">₹ {{ related_product.price }}</p>
+              </a>
+          </div>
+      {% empty %}
+          <p class="text-center text-gray-400 col-span-4">No related products available.</p>
+      {% endfor %}
+  </div>
+</section>
+
+
+<footer class="bg-zinc-900 text-white py-8">
+  <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Company Info -->
+    <div>
+      <h2 class="text-xl font-bold mb-4">About Us</h2>
+      <p class="text-gray-400">We offer the finest collection of fashion, travel, and everyday accessories. Discover your style with us!</p>
+    </div>
+
+    <!-- Navigation Links -->
+    <div>
+      <h2 class="text-xl font-bold mb-4">Quick Links</h2>
+      <ul class="space-y-2">
+        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+        <li><a href="#" class="text-gray-400 hover:text-white transition">Shop</a></li>
+        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
+        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h2 class="text-xl font-bold mb-4">Contact Us</h2>
+      <p class="text-gray-400">Email: support@example.com</p>
+      <p class="text-gray-400">Phone: +123 456 7890</p>
+      <p class="text-gray-400">Address: 123 Main Street, Anytown, USA</p>
+    </div>
+  </div>
+  <div class="text-center text-gray-500 mt-8">
+    &copy; 2025 Your Company Name. All Rights Reserved.
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mainImage = document.querySelector(".main-image");
+    const thumbnails = document.querySelectorAll(".cursor-pointer");
+
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener("click", function () {
+            mainImage.src = this.src;
+            mainImage.alt = this.alt;
+        });
+
+        // Add hover effect
+        thumbnail.classList.add("transition", "duration-300", "ease-in-out", "hover:shadow-lg", "hover:scale-105");
+    });
+});
+
+</script>
+
+
+{% endblock %}
