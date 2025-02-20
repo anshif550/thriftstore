@@ -69,20 +69,24 @@
       </div>
     </div>
 </div>
-<!-- Related Products Section -->
-<section class="bg-zinc-800 py-10">
-  <h2 class="text-2xl font-bold text-center text-white mb-6">Related Products</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-[200px]">
+<section class="py-10 bg-zinc-900">
+  <h2 class="text-2xl font-extralight font-mono text-white text-center mb-6">Related Products</h2>
+  <div class="flex flex-wrap justify-center gap-6 py-10">
       {% for related_product in related_products %}
-          <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition">
-              <a href="{% url 'web:single_product' id=related_product.id %}">
-                  <img src="{{ related_product.image.url }}" class="w-full h-[250px] rounded-lg object-cover mb-4" alt="{{ related_product.name }}">
-                  <h3 class="text-lg font-semibold text-gray-900">{{ related_product.name }}</h3>
-                  <p class="text-green-500 text-lg">₹ {{ related_product.price }}</p>
+          <div class="w-full max-w-xs p-3 transition duration-300 transform bg-white bg-opacity-85 rounded-lg hover:shadow-xl hover:scale-105 h-[400px]">
+              <a href="{% url 'web:single_product' id=related_product.id %}" class="block w-full h-full">
+                  <div class="w-full h-[60%]">
+                      <img src="{{ related_product.image.url }}" alt="{{ related_product.name }}" class="object-cover w-full rounded-2xl h-60">
+                  </div>
+                  <div class="overflow-hidden h-[40%] pt-7">
+                      <h3 class="mt-4 text-lg font-bold text-gray-700">{{ related_product.name }}</h3>
+                      <p class="mt-2 text-sm text-gray-600">{{ related_product.description|truncatewords:15 }}</p>
+                      <p class="text-green-400 font-semibold mt-2">₹{{ related_product.price }}</p>
+                  </div>
               </a>
           </div>
       {% empty %}
-          <p class="text-center text-gray-400 col-span-4">No related products available.</p>
+          <p class="text-gray-400 text-center w-full">No related products found.</p>
       {% endfor %}
   </div>
 </section>
