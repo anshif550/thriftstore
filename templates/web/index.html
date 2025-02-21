@@ -5,15 +5,15 @@
 {% block container %}
 
 <section class="h-[100vh]" style="background-image: url(/static/media/images/by\ ksonshoots.jpg); background-size: contain; background-position: center;">
-    <header class="flex justify-between h-[60px] px-20 items-center bg-black bg-opacity-50 animated-header fixed w-full pt-0 z-100">
+    <header class="flex justify-between h-[60px] px-20 z-full items-center bg-black bg-opacity-90 animated-header fixed w-full pt-0 z-100">
         <div>
-            <h1 class="text-[20px] font-bold text-white">TRIFT STORE<i class='bx bxs-shopping-bag text-green-500 ml-2'></i></h1>
+            <h1 class="text-[20px] font-bold text-white">TRIFT STORE<i class='ml-2 text-green-500 bx bxs-shopping-bag'></i></h1>
         </div>
         <div class="w-[30%] ml-[100px] flex justify-between">
-            <a href="" class="text-white m-auto animated-link">Home</a>
-            <a href="" class="text-white m-auto animated-link">About</a>
-            <a href="" class="text-white m-auto animated-link">Contact</a>
-            <a href="" class="text-white m-auto animated-link">Cart</a>
+            <a href="{% url 'web:index' %}" class="m-auto text-white animated-link">Home</a>
+            <a href="" class="m-auto text-white animated-link">About</a>
+            <a href="" class="m-auto text-white animated-link">Contact</a>
+            <a href="" class="m-auto text-white animated-link">Cart</a>
         </div>
         <div>
             <form action="" method="get">
@@ -26,131 +26,134 @@
         <div>
             <h1 class="text-[100px] font-bold text-white  main-heading">URBAN EDGE</h1>
             <h2 class="text-green-400 f text-[30px] sub-heading">Everithing you are  looking  <br> for id here</h2>
-            <button class="mt-7 animated-button"><a href="" class="bg-white font-bold px-6 py-2 rounded-sm text-green-400 bg-opacity-30">check it</a></button>
+            <button class="mt-7 animated-button"><a href="" class="px-6 py-2 font-bold text-green-400 bg-white rounded-sm bg-opacity-30">check it</a></button>
         </div>
     </div>
 </section>   
-<section class="bg-zinc-800">
-    <div class="flex justify-between px-[100px] py-[50px] ">
+<section class="bg-white">
+    <div class="flex justify-between px-[200px] py-[50px] ">
         <div class="">
-            <h1 class="text-[15px] text-center font-bold text-white relative z-0">T-SHIRTS
-            <a href=""><img src="/static/media/images/t-shirts.jpg" class="w-[150px] h-[150px] rounded-[50%] mt-5" alt=""></a>
+            <h1 class="text-[15px] text-center text-black font-mono relative z-0">T-SHIRTS
+            <a href=""><img src="/static/media/images/t-shirts.jpg" class="w-[100px] h-[100px] shadow-md shadow-black rounded-[50%] mt-5" alt=""></a>
         </div>
         <div class="">
-            <h1 class="text-[15px] text-center font-bold text-white relative">COMBO&OFFERS
-            <a href=""><img src="/static/media/images/Carly (smithkcarly) - Profile _ Pinterest.jpg" class="w-[150px] h-[150px] rounded-[50%] mt-5" alt=""></a>
+            <h1 class="text-[15px] text-center text-black font-mono relative">COMBO&OFFERS
+            <a href=""><img src="/static/media/images/Carly (smithkcarly) - Profile _ Pinterest.jpg" class="w-[100px] h-[100px] shadow-md shadow-black rounded-[50%] mt-5" alt=""></a>
         </div>
         <div class="">
-            <h1 class="text-[15px] text-center font-bold text-white relative">SHORTS
-            <a href=""><img src="/static/media/images/shorts.webp" class="w-[150px] h-[150px] rounded-[50%] mt-5" alt=""></a>
+            <h1 class="text-[15px] text-center text-black font-mono relative">SHORTS
+            <a href=""><img src="/static/media/images/shorts.webp" class="w-[100px] h-[100px] shadow-md shadow-black rounded-[50%] mt-5" alt=""></a>
         </div>
         <div class="">
-            <h1 class="text-[15px] text-center font-bold text-white relative">ACCESRIES
-            <a href=""><img src="/static/media/images/acceseries.jpg" class="w-[150px] h-[150px] rounded-[50%] mt-5" alt=""></a>
+            <h1 class="text-[15px] text-center text-black font-mono relative">ACCESRIES
+            <a href=""><img src="/static/media/images/acceseries.jpg" class="w-[100px] h-[100px] shadow-md shadow-black rounded-[50%] mt-5" alt=""></a>
         </div>
         <div class="">
-            <h1 class="text-[15px] text-center font-bold text-white relative">SUNGLASSES
-            <a href=""><img src="/static/media/images/glasses2.jpg" class="w-[150px] h-[150px] rounded-[50%] mt-5" alt=""></a>
+            <h1 class="text-[15px] text-center text-black font-mono relative">SUNGLASSES
+            <a href=""><img src="/static/media/images/glasses2.jpg" class="w-[100px] h-[100px] shadow-md shadow-black rounded-[50%] mt-5" alt=""></a>
         </div>
         <div class="">
-            <h1 class="text-[15px] text-center font-bold text-white relative">JACKETS
-            <a href=""><img src="/static/media/images/jacket-2.jpg" class="w-[150px] h-[150px] rounded-[50%] mt-5" alt=""></a>
+            <h1 class="text-[15px] text-center text-black font-mono relative">JACKETS
+            <a href=""><img src="/static/media/images/jacket-2.jpg" class="w-[100px] h-[100px] shadow-md shadow-black rounded-[50%] mt-5" alt=""></a>
         </div>      
     </div>
 </section>
-<section class="bg-zinc-800">
+<section class="bg-white">
     <div class="flex px-[200px] h-[400px] py-10">
-        <a href="" style="background-image: url(/static/media/images/offerzone.jpg); background-size: cover; background-position: center;" class="h-full w-[40%] mr-[10px] rounded-xl">
+        <a href="" style="background-image: url(/static/media/images/offerzone.jpg); background-size: cover; background-position: center;" class="h-full w-[40%] mr-[10px] rounded-xl shadow-md shadow-black">
             <h1 class="text-center font-bold  text-white text-[30px] font-mono mt-[100px]">WELL DEMANDED& <br>LIMITTED STOCKS</h1>
         </a>
         <div class="h-[400px]">
-           <a href="" style="background-image: url(/static/media/images/bg-3.jpg); background-size: cover; background-position: center;" class="h-[155px] w-[700px] rounded-xl block">
-                <h1 class="text-white text-center items-center text-[30px] pt-10 font-mono font-extrabold">OFFERZONE'50% </h1>
-                <img src="/static/media/images/new-offer.png" class="w-[50px] items-start relative bottom-[70px] left-[10px]" alt="">
+           <a href="" style="background-image: url(/static/media/images/bg-3.jpg); background-size: cover; background-position: center;" class="h-[155px] w-[700px] rounded-xl block shadow-md shadow-black">
+                <h1 class="text-white text-center items-center text-[30px] pt-[50px]  font-mono font-extrabold">OFFERZONE'50% </h1>
+                <img src="/static/media/images/new-offer.png" class="w-[50px] items-start relative bottom-[85px] left-[10px]" alt="">
            </a>
-           <a href="" style="background-image: url(/static/media/images/bg-4.jpg); background-size: cover; background-position: top;" class="h-[155px] mt-[10px] w-[700px] rounded-xl block">
-            <h1 class="text-white text-center items-center text-[30px] pt-10 font-extrabold font-mono">NEW STOCKS$</h1>
-            <img src="/static/media/images/new (1).png" class="w-[50px] items-start relative bottom-[70px] left-[10px]" alt="">
+           <a href="" style="background-image: url(/static/media/images/bg-4.jpg); background-size: cover; background-position: top;" class="h-[155px] mt-[10px] w-[700px] rounded-xl block shadow-md shadow-black">
+            <h1 class="text-white text-center items-center text-[30px] pt-[50px]  font-extrabold font-mono">NEW STOCKS$</h1>
+            <img src="/static/media/images/new (1).png" class="w-[50px] items-start relative bottom-[85px] left-[10px]" alt="">
        </a>
         </div>
     </div>
 </section>
-<section class="py-5 bg-zinc-800">
+<section class="py-5 bg-white">
     <div class="py-10">
-        <h1 class="text-center text-4xl font-mono font-bold text-neutral-300 mb-3">OUR COLLECTIONS</h1>
-        <p class="text-center font-extralight text-neutral-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit.  Officia accusamus veniam, at sit fugit commodi <br> molestiae veritatis magnam  quam minus, eos, nobis asperiores dolores.</p>
+        <h1 class="mb-3 font-mono text-4xl font-bold text-center text-neutral-900">OUR COLLECTIONS</h1>
+        <p class="text-center font-extralight text-neutral-900">Lorem ipsum dolor, sit amet consectetur adipisicing elit.  Officia accusamus veniam, at sit fugit commodi <br> molestiae veritatis magnam  quam minus, eos, nobis asperiores dolores.</p>
     </div>
     <div class="flex justify-between px-[200px] ">
-        <div class="m-auto items-center">
-          <img src="/static/media/images/free-shipping.png" class="mb-5 ml-2 opacity-50  p-2 w-[80px]" alt="">
-            <h1 class=" font-mono  text-neutral-400">quick delivery</h1>
+        <div class="items-center m-auto">
+          <img src="/static/media/images/free-shipping.png" class="mb-5 ml-2 opacity-70  p-2 w-[80px]" alt="">
+            
         </div>
-        <div class="m-auto items-center">
-            <img src="/static/media/images/discount (1).png" class="mb-5 ml-2 opacity-50  p-2 w-[80px]" alt="">
-            <h1 class=" font-mono text-neutral-400 ">best offers</h1>
+        <div class="items-center m-auto">
+            <img src="/static/media/images/new-offer.png" class="mb-5 ml-2 opacity-70  p-2 w-[80px]" alt="">
+            
         </div>
-        <div class="m-auto items-center">
-           <img src="/static/media/images/commerce.png" class="mb-5 ml-2 opacity-50  p-2 w-[80px]" alt="">
-            <h1 class=" font-mono text-neutral-400  text-center">returns</h1>
+        <div class="items-center m-auto">
+           <img src="/static/media/images/commerce.png" class="mb-5 ml-2 opacity-70  p-2 w-[80px]" alt="">
+           
         </div>
-        <div class="m-auto items-center">
-          <img src="/static/media/images/money.png" class="mb-5 ml-2 opacity-50  p-2 w-[80px]" alt="">
-            <h1 class=" font-mono text-neutral-400  text-center">Cashon delivery </h1>
+        <div class="items-center m-auto">
+          <img src="/static/media/images/money.png" class="mb-5 ml-2 opacity-70  p-2 w-[80px]" alt="">
+            
         </div>
 
     
     </div>
 
 </section>
-<header class="p-6 bg-zinc-800 shadow-md text-center text-2xl font-bold font-mono text-white">Order Now </header>
-  <main class=" mx-auto p-8 px-[150px] bg-zinc-800 w-full">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+  <main class=" mx-auto p-8 px-[150px] bg-white w-full ">
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
       <!-- Product Card -->
       {% for product in product %}
-      <a href="{% url 'web:single_product' id=product.id %}" class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition h-[400px]" style="background-image: url({{product.image.url}}); background-size: cover;">
-        <!-- <img src="{{product.image.url}}" alt="Product Image" class="rounded-lg w-full h-[450px] object-cover mb-4"> -->
-        <div class="bg-black rounded-2xl bg-opacity-40 pl-6 mt-10 mb-10">
-          <h2 class="text-lg font-semibold mb-0 mt-64 text-white">{{product.name}}</h2>
-          <p class="text-gray-100  text-[15px]">{{product.description}}</p>
-          <p class="text-gray-50  text-[15px]">Available only:{{product.stock}}</p>
-          <p class="text-xl font-extralight mt-2 text-white">₹{{product.price}}</p>
+      <a href="{% url 'web:single_product' id=product.id %}" class="bg-white p-4 rounded-xl shadow-md hover:shadow-2xl transition h-[400px]">
+        <img src="{{product.image.url}}" alt="Product Image" class="rounded-lg w-full h-[65%] object-cover mb-4">
+        <div class=" rounded-2xl bg-opacity-40   h-[35%]">
+          <h2 class="text-lg font-semibold text-gray-700">{{product.name}}</h2>
+          <p class="text-gray-500  text-[14px] mt-2">{{product.description}}</p>
+          <p class="text-gray-500  text-[13px] mt-3">Available only: <span class="text-red-600">{{product.stock}}</span></p>
+          <div class="flex">
+            <p class="text-[15px] font-bold mt-2 text-gray-700 mr-5 line-through">₹{{product.price}}</p>
+            <p class="text-[15px] font-bold mt-2 text-green-600">₹{{product.offer_price}}</p>
+          </div>
         </div>
       </a>
       {% endfor %}
 
   </main>
-  <div class="bg-zinc-800 w-full text-center  py-10">
-    <a href="{% url 'web:all_products' %}" class="text-center bg-white px-6 py-2 rounded-xl">View All Products</a>
+  <div class="w-full py-10 text-center bg-white">
+    <a href="{% url 'web:all_products' %}" class="text-center bg-zinc-800 text-white text-[15px] px-6 py-2 rounded-xl">View All Products</a>
   </div>
 
-  <footer class="bg-zinc-800 text-white py-8">
-    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+  <footer class="py-8 text-black bg-white">
+    <div class="grid grid-cols-1 gap-8 px-8 mx-auto max-w-7xl md:grid-cols-3">
       <!-- Company Info -->
       <div>
-        <h2 class="text-xl font-bold mb-4">About Us</h2>
-        <p class="text-gray-400">We offer the finest collection of fashion, travel, and everyday accessories. Discover your style with us!</p>
+        <h2 class="mb-4 text-xl font-bold">About Us</h2>
+        <p class="text-gray-500">We offer the finest collection of fashion, travel, and everyday accessories. Discover your style with us!</p>
       </div>
 
       <!-- Navigation Links -->
       <div>
-        <h2 class="text-xl font-bold mb-4">Quick Links</h2>
+        <h2 class="mb-4 text-xl font-bold">Quick Links</h2>
         <ul class="space-y-2">
-          <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
-          <li><a href="#" class="text-gray-400 hover:text-white transition">Shop</a></li>
-          <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
-          <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+          <li><a href="#" class="text-gray-500 transition hover:text-white">Home</a></li>
+          <li><a href="#" class="text-gray-500 transition hover:text-white">Shop</a></li>
+          <li><a href="#" class="text-gray-500 transition hover:text-white">Contact Us</a></li>
+          <li><a href="#" class="text-gray-500 transition hover:text-white">Privacy Policy</a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
       <div>
-        <h2 class="text-xl font-bold mb-4">Contact Us</h2>
-        <p class="text-gray-400">Email: support@example.com</p>
-        <p class="text-gray-400">Phone: +123 456 7890</p>
-        <p class="text-gray-400">Address: 123 Main Street, Anytown, USA</p>
+        <h2 class="mb-4 text-xl font-bold">Contact Us</h2>
+        <p class="text-gray-500">Email: support@example.com</p>
+        <p class="text-gray-500">Phone: +123 456 7890</p>
+        <p class="text-gray-500">Address: 123 Main Street, Anytown, USA</p>
       </div>
     </div>
-    <div class="text-center text-gray-500 mt-8">
+    <div class="mt-8 text-center text-gray-500">
       &copy; 2025 Your Company Name. All Rights Reserved.
     </div>
   </footer>

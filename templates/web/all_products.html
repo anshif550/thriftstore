@@ -4,65 +4,65 @@
 
 {% block container %}
 
-    <section class="py-10 bg-zinc-900 text-white ">
+    <section class="py-10 text-white bg-white ">
         <div class="w-full">
-            <header class="flex justify-between items-center w-[95%] m-auto rounded-xl overflow-hidden   h-[70px]" style="background-image: url(/static/media/images/singleheader.jpg); background-size: contain; background-size: calc(320px); background-position: var(450px); background-position-y: -40px; box-shadow: inset;">
+            <header class="flex shadow-md shadow-black justify-between items-center w-[95%] m-auto rounded-xl overflow-hidden   h-[70px]" style="background-image: url(/static/media/images/singleheader.jpg); background-size: contain; background-size: calc(320px); background-position: var(450px); background-position-y: -40px; box-shadow: inset;">
                 <h1 class="text-2xl font-semibold  items-center flex text-white bg-black pl-[50px] pr-[50px] h-full font-mono  bg-opacity-75 shadow-black rounded-r-2xl">Thrift Store</h1>
                 <nav class="bg-black bg-opacity-75 rounded-l-2xl py-4 px-[50px]">
-                  <ul class="flex space-x-8 items-center">
-                    <li><a href="#" class="text-white font-mono hover:underline">Home</a></li>
-                    <li><a href="#" class="text-white font-mono hover:underline">Shop</a></li>
-                    <li><a href="#" class="text-white font-mono hover:underline">Contact</a></li>
+                  <ul class="flex items-center space-x-8">
+                    <li><a href="{% url 'web:index' %}" class="font-mono text-white hover:underline">Home</a></li>
+                    <li><a href="#" class="font-mono text-white hover:underline">Shop</a></li>
+                    <li><a href="#" class="font-mono text-white hover:underline">Contact</a></li>
                     <i class='bx bx-menu text-white text-[30px] '></i>
                   </ul>
                 </nav>
               </header>
-            <h1 class="text-2xl font-extralight font-mono text-center mt-10 mb-10">All Products</h1>
+            <h1 class="mt-10 mb-10 font-mono text-2xl text-center text-black font-extralight">All Products</h1>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-[150px]">
                 {% for product in product %}
-                    <div class="bg-white bg-opacity-95 p-3 rounded-lg hover:shadow-lg hover:scale-105 transition duration-300">
+                    <div class="p-3 transition duration-300 bg-white rounded-lg shadow-md bg-opacity-95 hover:shadow-lg shadow-black hover:scale-105">
                         <a href="{% url 'web:single_product' id=product.id %}">
-                            <img src="{{ product.image.url }}" class="w-full h-60 object-cover rounded-xl">
-                            <h3 class="text-lg font-bold mt-4 text-gray-700">{{ product.name }}</h3>
-                            <p class="text-gray-600 mt-2">{{ product.description|truncatewords:15 }}</p>
-                            <p class="text-green-600 font-semibold mt-2">₹{{ product.price }}</p>
+                            <img src="{{ product.image.url }}" class="object-cover w-full h-60 rounded-xl">
+                            <h3 class="mt-4 text-lg font-bold text-gray-700">{{ product.name }}</h3>
+                            <p class="mt-2 text-gray-600">{{ product.description|truncatewords:15 }}</p>
+                            <p class="mt-2 font-semibold text-green-600">₹{{ product.price }}</p>
                         </a>
                     </div>
                 {% empty %}
-                    <p class="col-span-full text-center text-gray-400">No products available.</p>
+                    <p class="text-center text-gray-700 col-span-full">No products available.</p>
                 {% endfor %}
             </div>
         </div>
     </section>
-    <footer class="bg-zinc-900 text-white py-8">
-        <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+  <footer cla7ss="py-8 bg-whblacktext-whit">
+        <div class="grid grid-cols-1 gap-8 px-8 mx-auto max-w-7xl md:grid-cols-3">
           <!-- Company Info -->
           <div>
-            <h2 class="text-xl font-bold mb-4">About Us</h2>
-            <p class="text-gray-400">We offer the finest collection of fashion, travel, and everyday accessories. Discover your style with us!</p>
+            <h2 class="mb-4 text-xl font-bold">About Us</h2>
+            <p class="text-gray-700">We offer the finest collection of fashion, travel, and everyday accessories. Discover your style with us!</p>
           </div>
       
           <!-- Navigation Links -->
           <div>
-            <h2 class="text-xl font-bold mb-4">Quick Links</h2>
+            <h2 class="mb-4 text-xl font-bold">Quick Links</h2>
             <ul class="space-y-2">
-              <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
-              <li><a href="#" class="text-gray-400 hover:text-white transition">Shop</a></li>
-              <li><a href="#" class="text-gray-400 hover:text-white transition">Contact Us</a></li>
-              <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+              <li><a href="#" class="text-gray-700 transition hover:text-black">Home</a></li>
+              <li><a href="#" class="text-gray-700 transition hover:text-black">Shop</a></li>
+              <li><a href="#" class="text-gray-700 transition hover:text-black">Contact Us</a></li>
+              <li><a href="#" class="text-gray-700 transition hover:text-black">Privacy Policy</a></li>
             </ul>
           </div>
       
           <!-- Contact Info -->
           <div>
-            <h2 class="text-xl font-bold mb-4">Contact Us</h2>
-            <p class="text-gray-400">Email: support@example.com</p>
-            <p class="text-gray-400">Phone: +123 456 7890</p>
-            <p class="text-gray-400">Address: 123 Main Street, Anytown, USA</p>
+            <h2 class="mb-4 text-xl font-bold">Contact Us</h2>
+            <p class="text-gray-700">Email: support@example.com</p>
+            <p class="text-gray-700">Phone: +123 456 7890</p>
+            <p class="text-gray-700">Address: 123 Main Street, Anytown, USA</p>
           </div>
         </div>
-        <div class="text-center text-gray-500 mt-8">
+        <div class="mt-8 text-center text-gray-500">
           &copy; 2025 Your Company Name. All Rights Reserved.
         </div>
       </footer>

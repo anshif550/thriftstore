@@ -4,7 +4,7 @@ from store.models import *
 
 
 def index(request):
-    product = Product.objects.all()[:6]
+    product = Product.objects.all()[:8]
 
     context ={
         'product': product,
