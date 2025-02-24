@@ -6,17 +6,63 @@
 
     <section class="py-10 text-white bg-white ">
         <div class="w-full">
-            <header class="flex shadow-md shadow-black justify-between items-center w-[95%] m-auto rounded-xl overflow-hidden   h-[70px]" style="background-image: url(/static/media/images/singleheader.jpg); background-size: contain; background-size: calc(320px); background-position: var(450px); background-position-y: -40px; box-shadow: inset;">
-                <h1 class="text-2xl font-semibold  items-center flex text-white bg-black pl-[50px] pr-[50px] h-full font-mono  bg-opacity-75 shadow-black rounded-r-2xl">Thrift Store</h1>
-                <nav class="bg-black bg-opacity-75 rounded-l-2xl py-4 px-[50px]">
-                  <ul class="flex items-center space-x-8">
-                    <li><a href="{% url 'web:index' %}" class="font-mono text-white hover:underline">Home</a></li>
-                    <li><a href="#" class="font-mono text-white hover:underline">Shop</a></li>
-                    <li><a href="#" class="font-mono text-white hover:underline">Contact</a></li>
-                    <i class='bx bx-menu text-white text-[30px] '></i>
-                  </ul>
-                </nav>
-              </header>
+           
+    <header class="flex justify-between items-center shadow-md shadow-black   rounded-xl overflow-hidden   h-[70px] w-[90%] m-auto" style="background-image: url(/static/media/images/singleheader.jpg); background-size: contain; background-size: calc(320px); background-position: var(450px); background-position-y: -40px; box-shadow: inset;">
+      <h1 class="text-2xl font-semibold  items-center flex text-white bg-black pl-[50px] pr-[50px] h-full font-mono  bg-opacity-75 shadow-black rounded-r-2xl">Thrift Store</h1>
+      <nav class="bg-black bg-opacity-75 rounded-l-2xl py-4 px-[50px]">
+        <ul class="flex items-center space-x-8">
+          <li><a href="{% url 'web:index' %}" class="font-mono text-white hover:underline">Home</a></li>
+          <li><a href="#" class="font-mono text-white hover:underline">Shop</a></li>
+          <li><a href="#" class="font-mono text-white hover:underline">Contact</a></li>
+          <body class="relative">
+
+            <!-- menu Button -->
+            <button type="button" class="search-button text-white text-[20px]" onclick="toggleSidebar()">
+              <i class='bx bx-menu'></i>
+            </button>
+        
+            <!-- Sidebar (Initially Hidden) -->
+            <div id="sidebar" class="fixed top-0 right-0 h-screen w-[20%] bg-zinc-900 shadow-lg p-5 hidden">
+                <button class="text-slate-400 font-bold" onclick="toggleSidebar()">✖</button>
+                <h1 class="text-white text-center font-bold text-[23px]">URBAN EDGE</h1>
+                <div class=" py-5 text-center mt-5 ">
+                  <a href="" class="text-black py-3 px-10 rounded-2xl font-bold font-mono space-x-2 bg-white shadow-md shadow-zinc-600">Join Our Community <i class='bx bxs-bar-chart-alt-2'></i></a>
+                </div>               
+                <div class="py-2">
+                  <form action="" method="get">
+                      <h1 class="text-white font-mono mb-3">search your collection</h1>
+                      <input type="text" name="q" placeholder="Search..." class="rounded-3xl px-4 search-input py-2 w-full"> 
+                      <button type="submit" class="search-button"><i class='bx bx-search-alt-2 text-zinc-800 text-[20px] relative top-[-27px] right-[-230px] font-bold'></i></button>
+                  </form>
+                </div>
+                <div class=" py-2 border-[1px] border-gray-500  rounded-2xl text-center mb-6 ">
+                  <a href="" class="text-gray-400 py-3 px-10 rounded-2xl font-bold font-mono space-x-5 ">HOME<i class='bx bxs-home text-gray-400 ml-5' ></i></a>
+                </div>
+                <div class=" py-2 border-[1px] border-gray-500  rounded-2xl text-center mb-6">
+                  <a href="" class="text-gray-400 py-3 px-10 rounded-2xl font-bold font-mono space-x-5 ">ABOUT<i class='bx bxs-business text-gray-400 ml-5' ></i></a>
+                </div>
+                <div class=" py-2 border-[1px] border-gray-500  rounded-2xl text-center mb-6">
+                  <a href="" class="text-gray-400 py-3 px-10 rounded-2xl font-bold font-mono space-x-5 ">CONTACT<i class='bx bxs-contact text-gray-400 ml-5' ></i></a>
+                </div>
+                <div class=" py-2 border-[1px] border-gray-500  rounded-2xl text-center mb-6">
+                  <a href="" class="text-gray-400 py-3 px-10 rounded-2xl font-bold font-mono space-x-5 ">CART<i class='bx bx-shopping-bag text-gray-400 ml-5' ></i></a>
+                </div>
+                <div class=" py-2 border-[1px] border-gray-500  rounded-2xl text-center mb-6">
+                  <a href="" class="text-gray-400 py-3 px-10 rounded-2xl font-bold font-mono space-x-5 ">MY ORDERS<i class='bx bxs-package text-gray-400 ml-5' ></i></a>
+                </div>
+                <p class="text-gray-300 mt-10 font-extralight font-mono">Let me know if you need it in a different tone! 😊</p>
+                
+            </div>
+        
+            <script>
+                function toggleSidebar() {
+                    const sidebar = document.getElementById("sidebar");
+                    sidebar.classList.toggle("hidden");
+                }
+            </script>
+        </ul>
+      </nav>
+    </header>
             <h1 class="mt-10 mb-10 font-mono text-2xl text-center text-black font-extralight">All Products</h1>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-[150px]">
