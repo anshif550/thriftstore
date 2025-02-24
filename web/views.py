@@ -37,3 +37,11 @@ def all_products(request):
             'product': product,
 
         })
+
+def category_products(request, category_slug):
+    category = Category.objects.get(slug=category_slug)
+    products = Product.objects.filter(category=category)
+
+    return render(request, 'web/category_products.html', {'category': category, 'products': products})
+
+
