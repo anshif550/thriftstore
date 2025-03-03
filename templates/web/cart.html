@@ -1,0 +1,79 @@
+{% extends 'base/base.html' %}
+{% block container %}
+<header class="flex justify-between items-center shadow-md shadow-black w-[90%] m-auto mt-5 rounded-xl overflow-hidden h-[70px]" style="background-image: url(/static/media/images/singleheader.jpg); background-size: contain; background-size: calc(320px); background-position: var(450px); background-position-y: -40px; box-shadow: inset;">
+    <h1 class="text-2xl font-semibold items-center flex text-white bg-black pl-[50px] pr-[50px] h-full font-mono bg-opacity-75 shadow-black rounded-r-2xl">Thrift Store</h1>
+    <nav class="bg-black bg-opacity-75 rounded-l-2xl py-4 px-[50px]">
+        <ul class="flex items-center space-x-8">
+            <li><a href="{% url 'web:index' %}" class="font-mono text-white hover:underline">Home</a></li>
+            <li><a href="#" class="font-mono text-white hover:underline">Shop</a></li>
+            <li><a href="#" class="font-mono text-white hover:underline">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<h1 class="mt-10 font-mono text-xl text-center">Your Cart</h1>
+<div class="w-[80%] mx-auto mt-10 p-5 bg-white shadow-lg rounded-lg">
+    <table class="w-full border border-collapse border-gray-300">
+        <thead>
+            <tr class="bg-gray-100">
+                <th class="p-3 border">Product</th>
+                <th class="p-3 border">Price</th>
+                <th class="p-3 border">Quantity</th>
+                <th class="p-3 border">Total</th>
+                <th class="p-3 border">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in cart_items %}
+            <tr>
+                <td class="flex items-center p-3 border">
+                    <img src="{{ item.product.image.url }}" class="object-cover w-16 h-16 mr-4 rounded">
+                    {{ item.product.name }}
+                </td>
+                <td class="p-3 border">₹{{ item.product.price }}</td>
+                <td class="p-3 text-center border">
+                    <input type="number" value="{{ item.quantity }}" class="w-16 text-center border rounded">
+                </td>
+                <td class="p-3 border">₹{{ item.total_price }}</td>
+                <td class="p-3 text-center border">
+                    <button class="px-3 py-1 text-white bg-red-500 rounded">Remove</button>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5" class="p-5 text-center text-gray-500">Your cart is empty.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="flex justify-between mt-5">
+        <a href="{% url 'web:all_products' %}" class="px-5 py-2 text-white bg-gray-500 rounded">Continue Shopping</a>
+        <button class="px-5 py-2 text-white bg-green-500 rounded">Proceed to Checkout</button>
+    </div>
+</div>
+
+<footer class="py-8 mt-10 text-black bg-white">
+    <div class="grid grid-cols-1 gap-8 px-8 mx-auto max-w-7xl md:grid-cols-3">
+        <div>
+            <h2 class="mb-4 text-xl font-bold">About Us</h2>
+            <p class="text-gray-500">We offer the finest collection of fashion, travel, and everyday accessories. Discover your style with us!</p>
+        </div>
+        <div>
+            <h2 class="mb-4 text-xl font-bold">Quick Links</h2>
+            <ul class="space-y-2">
+                <li><a href="#" class="text-gray-500 transition hover:text-black">Home</a></li>
+                <li><a href="#" class="text-gray-500 transition hover:text-black">Shop</a></li>
+                <li><a href="#" class="text-gray-500 transition hover:text-black">Contact Us</a></li>
+                <li><a href="#" class="text-gray-500 transition hover:text-black">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-4 text-xl font-bold">Contact Us</h2>
+            <p class="text-gray-500">Email: support@example.com</p>
+            <p class="text-gray-500">Phone: +123 456 7890</p>
+            <p class="text-gray-500">Address: 123 Main Street, Anytown, USA</p>
+        </div>
+    </div>
+    <div class="mt-8 text-center text-gray-500">&copy; 2025 Your Company Name. All Rights Reserved.</div>
+</footer>
+{% endblock %}

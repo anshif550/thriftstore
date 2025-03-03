@@ -3,18 +3,117 @@
 {% load static %} -->
 
 {% block container %}
+<header class="flex justify-between items-center shadow-md shadow-black w-[90%] m-auto mt-5   rounded-xl overflow-hidden   h-[70px]" style="background-image: url(/static/media/images/singleheader.jpg); background-size: contain; background-size: calc(320px); background-position: var(450px); background-position-y: -40px; box-shadow: inset;">
+    <h1 class="text-2xl font-semibold  items-center flex text-white bg-black pl-[50px] pr-[50px] h-full font-mono  bg-opacity-75 shadow-black rounded-r-2xl">Thrift Store</h1>
+    <nav class="bg-black bg-opacity-75 rounded-l-2xl py-4 px-[50px]">
+      <ul class="flex items-center space-x-8">
+        <li><a href="{% url 'web:index' %}" class="font-mono text-white hover:underline">Home</a></li>
+        <li><a href="#" class="font-mono text-white hover:underline">Shop</a></li>
+        <li><a href="#" class="font-mono text-white hover:underline">Contact</a></li>
+        <body class="relative">
 
-    <h1 class="text-3xl font-bold text-center">{{ category.name }}</h1>
+          <!-- menu Button -->
+          <button type="button" class="search-button text-white text-[20px]" onclick="toggleSidebar()">
+            <i class='bx bx-menu'></i>
+          </button>
+      
+          <!-- Sidebar (Initially Hidden) -->
+          <div id="sidebar" class="fixed top-0 right-0 h-screen w-[20%] bg-zinc-900 shadow-lg p-5 hidden">
+              <button class="font-bold text-slate-400" onclick="toggleSidebar()">✖</button>
+              <h1 class="text-white text-center font-bold text-[23px]">URBAN EDGE</h1>
+              <div class="py-5 mt-5 text-center ">
+                <a href="" class="px-10 py-3 space-x-2 font-mono font-bold text-black bg-white shadow-md rounded-2xl shadow-zinc-600">Join Our Community <i class='bx bxs-bar-chart-alt-2'></i></a>
+              </div>               
+              <div class="py-2">
+                <form action="" method="get">
+                    <h1 class="mb-3 font-mono text-white">search your collection</h1>
+                    <input type="text" name="q" placeholder="Search..." class="w-full px-4 py-2 rounded-3xl search-input"> 
+                    <button type="submit" class="search-button"><i class='bx bx-search-alt-2 text-zinc-800 text-[20px] relative top-[-27px] right-[-230px] font-bold'></i></button>
+                </form>
+              </div>
+              <div class=" py-2 border-[1px] border-gray-500  rounded-2xl text-center mb-6 ">
+                <a href="" class="px-10 py-3 space-x-5 font-mono font-bold text-gray-400 rounded-2xl ">HOME<i class='ml-5 text-gray-400 bx bxs-home' ></i></a>
+              </div>
+              <div class=" py-2 border-[1px] border-gray-500  rounded-2xl text-center mb-6">
+                <a href="" class="px-10 py-3 space-x-5 font-mono font-bold text-gray-400 rounded-2xl ">ABOUT<i class='ml-5 text-gray-400 bx bxs-business' ></i></a>
+              </div>
+              <div class=" py-2 border-[1px] border-gray-500  rounded-2xl text-center mb-6">
+                <a href="" class="px-10 py-3 space-x-5 font-mono font-bold text-gray-400 rounded-2xl ">CONTACT<i class='ml-5 text-gray-400 bx bxs-contact' ></i></a>
+              </div>
+              <div class=" py-2 border-[1px] border-gray-500  rounded-2xl text-center mb-6">
+                <a href="" class="px-10 py-3 space-x-5 font-mono font-bold text-gray-400 rounded-2xl ">CART<i class='ml-5 text-gray-400 bx bx-shopping-bag' ></i></a>
+              </div>
+              <div class=" py-2 border-[1px] border-gray-500  rounded-2xl text-center mb-6">
+                <a href="" class="px-10 py-3 space-x-5 font-mono font-bold text-gray-400 rounded-2xl ">MY ORDERS<i class='ml-5 text-gray-400 bx bxs-package' ></i></a>
+              </div>
+              <p class="mt-10 font-mono text-gray-300 font-extralight">Let me know if you need it in a different tone! 😊</p>
+              
+          </div>
+      
+          <script>
+              function toggleSidebar() {
+                  const sidebar = document.getElementById("sidebar");
+                  sidebar.classList.toggle("hidden");
+              }
+          </script>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="grid grid-cols-3 gap-6 mt-10">
+    <h1 class="mt-10 font-mono text-xl text-center">category: <span class="text-teal-900"> {{ category.name }}</span></h1>
+
+    <div class="grid grid-cols-4 gap-6 mt-10 px-[100px]">
         {% for product in products %}
-        <div class="border p-4 rounded-lg shadow-md">
+        <div class="p-4 transition border rounded-lg shadow-md hover:shadow-2xl">
             <img src="{{ product.image.url }}" class="w-full h-[200px] object-cover rounded-lg">
-            <h2 class="text-xl font-semibold mt-2">{{ product.name }}</h2>
-            <p class="text-gray-600">Price: ${{ product.price }}</p>
-            <a href="/product/{{ product.id }}/" class="text-blue-500">View Details</a>
+            <h2 class="mt-2 text-xl font-semibold">{{ product.name }}</h2>
+            <p class="text-gray-500  text-[14px] mt-2">{{product.description}}</p>
+            <div class="flex">
+                <p class="text-[15px] font-bold mt-2 text-gray-700 mr-5 line-through">₹{{product.price}}</p>
+                <p class="text-[15px] font-bold mt-2 text-green-600">₹{{product.offer_price}}</p>
+            </div>
+            <div class="flex items-center">
+                <a href="{% url 'web:single_product' id=product.id %}" class="items-center text-blue-500">View Details </a>
+                <i class='item-center bx bx-right-arrow-alt text-[18px] text-blue-700'></i>
+            </div>   
         </div>
+        {% empty %}
+        <p class="col-span-3 text-center text-gray-500">No products available in this category.</p>
         {% endfor %}
     </div>
+    
+    
+    
+  <footer class="py-8 mt-10 text-black bg-white">
+    <div class="grid grid-cols-1 gap-8 px-8 mx-auto max-w-7xl md:grid-cols-3">
+      <!-- Company Info -->
+      <div>
+        <h2 class="mb-4 text-xl font-bold">About Us</h2>
+        <p class="text-gray-500">We offer the finest collection of fashion, travel, and everyday accessories. Discover your style with us!</p>
+      </div>
+
+      <!-- Navigation Links -->
+      <div>
+        <h2 class="mb-4 text-xl font-bold">Quick Links</h2>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-500 transition hover:text-white">Home</a></li>
+          <li><a href="#" class="text-gray-500 transition hover:text-white">Shop</a></li>
+          <li><a href="#" class="text-gray-500 transition hover:text-white">Contact Us</a></li>
+          <li><a href="#" class="text-gray-500 transition hover:text-white">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h2 class="mb-4 text-xl font-bold">Contact Us</h2>
+        <p class="text-gray-500">Email: support@example.com</p>
+        <p class="text-gray-500">Phone: +123 456 7890</p>
+        <p class="text-gray-500">Address: 123 Main Street, Anytown, USA</p>
+      </div>
+    </div>
+    <div class="mt-8 text-center text-gray-500 mb-">
+      &copy; 2025 Your Company Name. All Rights Reserved.
+    </div>
+  </footer>
 
 {% endblock %}

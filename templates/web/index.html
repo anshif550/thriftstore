@@ -31,44 +31,26 @@
     </div>
 </section>   
 <section class="bg-white">
-    <div class="flex justify-between px-[200px] py-[50px] ">
+    <div class="flex justify-between px-[150px] py-[50px] ">
+      {% for category in category %}
         <div class="relative z-0 ">
-            <h1 class="text-[15px] text-center text-black font-mono relative z-0">T-SHIRTS
-            <a href="/category_products/t-shirts/"><img src="/static/media/images/t-shirts.jpg" class="w-[100px] h-[100px] shadow-md shadow-black rounded-[50%] mt-5" alt=""></a>
+            <h1 class="text-[15px] text-center text-black font-mono font-bold relative z-0">{{category.name}}
+            <a href="{% url 'web:category_products' category.id %}"><img src="{{category.image.url}}" class="w-[100px] h-[100px] shadow-md  rounded-[50%] mt-5" alt=""></a>
         </div>
-        <div class="relative z-0 ">
-            <h1 class="text-[15px] text-center text-black font-mono relative">COMBO&OFFERS
-            <a href=""><img src="/static/media/images/Carly (smithkcarly) - Profile _ Pinterest.jpg" class="w-[100px] h-[100px] shadow-md shadow-black rounded-[50%] mt-5" alt=""></a>
-        </div>
-        <div class="relative z-0 ">
-            <h1 class="text-[15px] text-center text-black font-mono relative">SHORTS
-            <a href=""><img src="/static/media/images/shorts.webp" class="w-[100px] h-[100px] shadow-md shadow-black rounded-[50%] mt-5" alt=""></a>
-        </div>
-        <div class="relative z-0 ">
-            <h1 class="text-[15px] text-center text-black font-mono relative">ACCESRIES
-            <a href=""><img src="/static/media/images/acceseries.jpg" class="w-[100px] h-[100px] shadow-md shadow-black rounded-[50%] mt-5" alt=""></a>
-        </div>
-        <div class="relative z-0 ">
-            <h1 class="text-[15px] text-center text-black font-mono relative">SUNGLASSES
-            <a href=""><img src="/static/media/images/glasses2.jpg" class="w-[100px] h-[100px] shadow-md shadow-black rounded-[50%] mt-5" alt=""></a>
-        </div>
-        <div class="relative z-0 ">
-            <h1 class="text-[15px] text-center text-black font-mono relative">JACKETS
-            <a href=""><img src="/static/media/images/jacket-2.jpg" class="w-[100px] h-[100px] shadow-md shadow-black rounded-[50%] mt-5" alt=""></a>
-        </div>      
+      {% endfor %}
     </div>
 </section>
 <section class="bg-white">
     <div class="flex px-[200px] h-[400px] py-10">
-        <a href="" style="background-image: url(/static/media/images/offerzone.jpg); background-size: cover; background-position: center;" class="h-full w-[40%] mr-[10px] rounded-xl shadow-md shadow-black">
+        <a href="" style="background-image: url(/static/media/images/offerzone.jpg); background-size: cover; background-position: center;" class="h-full w-[40%] mr-[10px] rounded-xl shadow-md ">
             <h1 class="text-center font-bold  text-white text-[30px] font-mono mt-[100px]">WELL DEMANDED& <br>LIMITTED STOCKS</h1>
         </a>
         <div class="h-[400px]">
-           <a href="" style="background-image: url(/static/media/images/bg-3.jpg); background-size: cover; background-position: center;" class="h-[155px] w-[700px] rounded-xl block shadow-md shadow-black">
+           <a href="" style="background-image: url(/static/media/images/bg-3.jpg); background-size: cover; background-position: center;" class="h-[155px] w-[700px] rounded-xl block shadow-md ">
                 <h1 class="text-white text-center items-center text-[30px] pt-[50px]  font-mono font-extrabold">OFFERZONE'50% </h1>
                 <img src="/static/media/images/new-offer.png" class="w-[50px] items-start relative bottom-[85px] left-[10px]" alt="">
            </a>
-           <a href="" style="background-image: url(/static/media/images/bg-4.jpg); background-size: cover; background-position: top;" class="h-[155px] mt-[10px] w-[700px] rounded-xl block shadow-md shadow-black">
+           <a href="" style="background-image: url(/static/media/images/bg-4.jpg); background-size: cover; background-position: top;" class="h-[155px] mt-[10px] w-[700px] rounded-xl block shadow-md ">
             <h1 class="text-white text-center items-center text-[30px] pt-[50px]  font-extrabold font-mono">NEW STOCKS$</h1>
             <img src="/static/media/images/new (1).png" class="w-[50px] items-start relative bottom-[85px] left-[10px]" alt="">
        </a>

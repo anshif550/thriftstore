@@ -5,9 +5,11 @@ from store.models import *
 
 def index(request):
     product = Product.objects.all()[:8]
+    category = Category.objects.all()
 
     context ={
         'product': product,
+        'category': category
     }
 
     return render(request, "web/index.html",context=context)
@@ -38,10 +40,8 @@ def all_products(request):
 
         })
 
-def category_products(request, category_slug):
-    category = Category.objects.get(slug=category_slug)
-    products = Product.objects.filter(category=category)
-
+def category_products(request, id):
+    category = get_object_or_404(Category, id=id)  # Fetch category using ID
+    products = Product.objects.filter(category=category)  # Fetch products belonging to the category
     return render(request, 'web/category_products.html', {'category': category, 'products': products})
-
 
